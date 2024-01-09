@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400&family=Rajdhani:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  font-size: 65%;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.App {
+  width: 100%;
+}
+
+.Header{
+  background: linear-gradient(to right, rgb(2, 130, 166),rgb(133, 179, 127));
+  width: 100%;
+  height: 9vh;
+  display: flex;
+}
+
+.wholeScreen{
+  display: none;
+}
+
+.title {
+  color: white;
+  width: 30%;
+  height: 100%;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar{
+  width: 68%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* margin-right: 10%; */
+}
+
+.buttonContainer {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttonContainer2{
+  display: none;
+}
+
+.navButton {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-size: 1.5rem;
+  width: 9%;
+}
+
+#libraryBtn{
+    width: 13%;
+}
+
+#contentBtn {
+  width: 17%;
+  flex-grow: 0.3;
+}
+
+.navButton2 {
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-size: 1.8rem;
+  width: 8%;
+}
+
+#libraryBtn2 {
+   border: none;
+   border-bottom: 1px solid white;
+   width: 13%;
+}
+
+#contentBtn2 {
+  border: none;
+  border-bottom: 1px solid white;
+  width: 17%;
+}
+
+.menuBtn {
+  border: none;
+  outline: none;
+  width: 4%;
+  color: white;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 100%;
+  height: 100%;
+}
+
+.TabsSection {
+  background: rgba(219, 214, 214, 0.3);
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+
+.tabs {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Btn{
+  border: none;
+  outline: none;
+  width: 30%;
+  height: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Btn2 {
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid black;
+  color: rgb(6, 119, 136);
+  width: 30%;
+  height: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkIcon {
+  height: 50%;
+  width: 20%;
+}
+.checkIcon2 {
+  display: none;
+}
+
+.createBtn {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.addCourseBtn {
+  background-color: white;
+  color: rgb(6, 119, 136);
+  border: 2px solid rgb(6, 119, 136);
+  width: 30%;
+  height: 60%;
+  border-radius: 40px;
+  font-size: 1.7rem;
+}
+
+#shortText {
+  display: none;
+}
+
+.search {
+  background: rgba(252, 248, 248, 0.5);
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar {
+  width: 54%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#searchField {
+  border: 1px solid rgba(149, 143, 143,0.5);
+  border-radius: 20px;
+  width: 90%;
+  height: 50%;
+  margin-left: 15%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 15%;
+  color: grey;
+  width: 5%;
+  height: 30%;
+}
+
+.dropDown {
+  width: 40%;
+  height: 100%;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#courseChoice {
+  border: 2px solid gray;
+  background-color: white;
+  border-radius: 5px;
+  width: 28%;
+  height: 50%;
+  font-size: 1.4rem;
+}
+
+select:first-child {
+  color: rgba(128, 128, 128,0.8);
+}
+
+.tableContainer {
+  background: rgba(252, 248, 248, 0.5);
+  padding: 0 9% 0 7.5%;
+  width: 100%;
+  
+}
+
+.table{
+  width: 100%;
+}
+
+.row {
+  border-top: 1px solid rgba(128, 128, 128,0.3);
+  border-left: 4px solid black;
+  border-right: 1px solid rgba(128, 128, 128,0.3);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#headingRow {
+  border: none;
+}
+
+.firstCell {
+  width: 31%;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.secondCell {
+  width: 28%;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.thirdCell {
+  width: 15%;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fourthCell {
+  width: 10%;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fifthCell {
+  width: 12%;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#firstBox {
+  margin-left: 15px;
+}
+
+.scrollBtn {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.scrollBtn button {
+  color: grey;
+  background: none;
+  border: none;
+}
+
+tbody {
+  background-color: white;
+}
+
+.firstSubCell {
+  width: 50%;
+  height: 50%;
+  padding-left: 15px;
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.secondSubCell {
+  width: 50%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.time {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+.count{
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.estimateTime {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  border: 2px solid rgb(43, 121, 92);
+  background-color: rgb(43, 121, 92);
+  border-radius: 20px;
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  width: 70%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1370px) {
+  .row th{
+    font-size: 1.3rem;
+  }
+  .row td{
+    font-size: 1rem;
+  }
+  .firstSubCell{
+    font-size: 1.6rem;
+  }
+   .addCourseBtn{
+    font-size: 1.5rem;
+   }
+   .secondSubCell:first-child {
+    font-size: 1.4rem;
+  }
+  .time{
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .title{
+    width: 33%;
+  }
+
+}
+
+@media only screen and (max-width: 1015px) {
+  .title{
+    font-size: 1.3rem;
+    margin-left: 15px;
+  }
+  .navBar{
+    width: 70%;
+    margin-right: 2%;
+  }
+  .navButton{
+    font-size: 0.94rem;
+  }
+  .searchIcon{
+    left: 15%;
+  }
+  .createBtn{
+    width: 53%;
+  }
+  .addCourseBtn {
+    font-size: 1rem;
+    padding: 0 1px;
+  }
+  .tableContainer{
+    padding-right: 7%;
+  }
+  .firstSubCell{
+    font-size: 1.4rem;
+  }
+  .time{
+    font-size: 1rem;
+  }
+  .status{
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .title{
+    font-size: 1.3rem;
+    margin-left: 0;
+    padding-left: 40px;
+  }
+  .tabs button p{
+    font-size: 1rem;
+  }
+  .firstSubCell{
+    font-size: 1.22rem;
+  }
+  .status{
+    font-size: 0.8rem;
+  }
+  .tableContainer{
+    padding-right: 10%;
+  }
+  .menuBtn{
+    width: 9%;
+    height: 4vh;
+  }
+  .createBtn{
+    margin-right: 10%;
+  }
+  .addCourseBtn{
+    font-size: 1rem;
+    width: 30%;
+  }
+  .secondSubCell:first-child {
+    font-size: 1rem;
+  }
+  .time{
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title{
+    font-size: 1rem;
+    padding: 0;
+    width: 40%;
+    margin-left: 10px;
+  }
+  .addCourseBtn {
+    font-size: 1.1rem;
+    width: auto;
+    padding: 0 10px;
+    margin-right: 0;
+  }
+  .createBtn{
+    margin-right: 9%;
+  }
+  .tabs{
+    margin-left: 10px;
+  }
+  #courseChoice {
+    width: 50%;
+  }
+  .searchBar{
+    width: 62%;
+    justify-content: flex-start;
+    margin-left: 7%;
+  }
+  .searchIcon {
+    left: 3%;
+  }
+  #searchField {
+    width: 100%;
+    margin-left: 0;
+  }
+  .status{
+    font-size: .8rem;
+  }
+  .navBar{
+    width: 80%;
+  }
+  .navButton {
+    font-size: 0.7rem;
+    width: auto;
+  }
+  .menuBtn{
+    width: 9%;
+    height: 4vh;
+  }
+  .Btn {
+    width: auto;
+  }
+  .Btn2{
+    width: auto;
+  }
+
+  .tabs button p {
+    font-size: 0.7rem;
+    padding: 0 3px;
+  }
+  .time {
+    font-size: 0.7rem;
+  }
+  .tabs{
+    justify-content: flex-start;
+    padding-left: 6%;
+    width: 50%;
+  }
+  .tableContainer{
+    padding: 0 9% 0 7%;
+  }
+  .secondSubCell:first-child {
+    font-size: 0.9rem;
+  }
+  .row{
+    justify-content: space-between;
+  }
+  .row th{
+    font-size: 1rem;
+    width: 17%;
+    justify-content: space-around;
+  }
+  .icon{
+    font-size: 1.1rem;
+  }
+  .row td {
+    flex-grow: 0;
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .firstSubCell{
+    font-size: 0.87rem;
+    padding: 0;
+    width: auto;
+  }
+  .status{
+    width: auto;
+    padding: 0 5px;
+    font-size: 0.6rem;
+    margin-left: 0;
+  }
+  .secondSubCell{
+    flex-grow: 1;
+    height: 55%;
+  }
+  #firstBox{
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .Header{
+    position: relative;
+  }
+  .wholeScreen{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }
+  .title{
+    font-size: 0.6rem;
+    width: 30%;
+  }
+  .navBar{
+    margin: 0;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .menuBtn {
+    width: 9%;
+    margin-right: 12px;
+  }
+  .buttonContainer{
+    background-color: rgb(2, 169, 116);
+    border-radius: 5px;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    width: 95%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    z-index: 1;
+  }
+  #lastChild {
+    border: none;
+  }
+  .navButton{
+    border-bottom: 0.5px solid white;
+    background-color: none;
+    font-size: 1.18rem;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: Center;
+    align-items: center;
+    padding-left: 10px;
+  }
+  #contentBtn{
+    width: 100%;
+    flex-grow: 0;
+  }
+  #libraryBtn{
+    width: 100%;
+  }
+
+  #longText {
+    display: none;
+  }
+  #shortText {
+    display: block;
+  }
+  .searchBar {
+    width: 70%;
+    margin-left: 2%;
+  }
+  .searchIcon {
+    left: 7%;
+  }
+  .createBtn{
+
+    width: 35%;
+  }
+
+  .addCourseBtn{
+    font-size: 0.9rem;
+    width: auto;
+  }
+  .tabs{
+    width: 60%;
+  }
+  .Btn2{
+    width: auto;
+  }
+  .Btn{
+    width: auto;
+  }
+  #searchField{
+    margin-left: 10px;
+  }
+  .dropDown{
+    margin-left: 10px;
+  }
+  #courseChoice{
+    width: 70%;
+  }
+  .tableContainer{
+    width: 100%;
+    padding: 0 5%;
+  }
+  .row{
+    justify-content: space-between;
+  }
+  .row th{
+    font-size: 0.7rem;
+    width: 19%;
+  }
+  .row td{
+    font-size: 0.8rem;
+    width: 18%;
+    justify-content: center;
+  }
+  .firstCell{
+    margin-left: 2px;
+  }
+  .firstSubCell{
+    font-size: inherit;
+    padding: 0;
+  }
+  .scrollBtn{
+    margin-left: 5px;
+  }
+  .secondSubCell {
+    height: 45%;
+  }
+  .secondSubCell:first-child {
+    font-size: 0.7rem;
+  }
+  .time{
+    font-size: 0.6rem;
+  }
+  .status{
+    width: auto;
+    padding: 0 5px;
+    font-size: 0.6rem;
+    margin-left: 0;
+    margin-right: 2px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .tableContainer{
+    padding: 0;
+    width: auto;
+  }
+}

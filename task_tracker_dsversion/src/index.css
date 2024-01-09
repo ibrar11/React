@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App{
+  border: 2px solid gray;
+  width: 50vw;
+  height: 100vh;
+  /* padding: 0 20% 0 20%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.Header {
+ margin-top: 30px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 90%;
+}
+
+h1{
+  font-size: 5rem;
+}
+
+#closeTaskBtn {
+  height: 90%;
+  width: 22%;
+  font-size: 2rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#openTaskBtn {
+  height: 90%;
+  width: 22%;
+  font-size: 2rem;
+  background-color: green;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.hideButton  {
+  display: none;
+}
+
+.Home {
+  margin-top: 30px;
+  display: flex;
+  min-height: 75%;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+}
+
+.closeModalTask {
+  /* background-color: rgb(240, 230, 140,0.4); */
+  border: 0.1px solid black;
+  height: 100%;
+  overflow-y: auto;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.openModalTask {
+  height: 30%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.openModalTask .itemBox{
+  border: 1px solid gainsboro;
+  background-color: rgb(128,128,128,0.09);
+  height: 80%;
+}
+
+.closeModalTask .itemBox{
+  border: 1px solid gainsboro;
+  background-color: rgb(128,128,128,0.09);
+  min-height: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemBox{
+  border: 1px solid gainsboro;
+  background-color: rgb(128,128,128,0.09);
+  min-height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.reminderOff {
+  text-decoration: none;
+  color: black;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.reminderOn {
+  text-decoration: none;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: red
+}
+
+.reminderOn p {
+  font-size: 1.8rem;
+
+}
+
+.reminderOff p {
+  font-size: 1.8rem;
+}
+
+.minorDetails {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Form {
+  width: 100%;
+  min-height: 60%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.Form button {
+  width: 100%;
+  height: 15%;
+  font-size: 2rem;
+  color: #fff;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.forTask {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.forDate {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.forTime {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.forDescription {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.forDescription label {
+  height: 30%;
+  display: flex;
+  align-items: center;
+}
+#description {
+  height: 70%;
+}
+
+.forReminder {
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#checkBox {
+  margin-right: 60px;
+  height: 40%;
+  width: 30%;
+}
+
+
+label {
+  font-size: 2rem;
+}
+
+input {
+  font-size: 2rem;
+  height: 40%;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.itemButtons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.deleteButton svg {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.editButton svg {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+
+.deleteButton svg:focus, 
+.deleteButton svg:hover {
+  color: red;
+  outline: none;
+}
+
+.editButton svg:focus, 
+.editButton svg:hover {
+  color: black;
+  outline: none;
+}
+
+.EditTask {
+  display: flex;
+  min-height: 80%;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+
+.Footer {
+  font-size: 2rem;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#allTask {
+  width: 20%;
+  height: 10%;
+  padding-top: 20px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: black;
+}
+
+#allTaskBtn {
+  width: 100%;
+  height: 100%; 
+  border-radius: 5px;
+  color: #fff;
+  background-color: steelblue;
+}
+
+#allTask :hover {
+  color: steelblue;
+  background-color: #fff;
+}
+
+.AllTask {
+  height: 100%;
+  overflow-y: auto;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainSection {
+  width: 90%;
+  min-height: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+#HomeButton {
+  font-size: 2rem;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#HomeBtnTxt :hover{
+  background-color: #fff;
+  color: steelblue;
+}
+
+#HomeBtnTxt {
+  text-decoration: none;
+  width: 15%;
+  height: 65%;
+}
+
+#HomeBtnTxt button {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: steelblue;
+}
+
+.sorryMsg {
+  font-size: 2rem;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.taskView {
+  width: 90%;
+  min-height: 70%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.taskInfo {
+  border: 0.1px solid black;
+  background-color: rgb(128, 128, 128,0.05);
+  min-height: 60%;
+  margin: 50px 40px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.taskInfo p {
+  font-size: 3.0rem;
+}
+
+.editInViewTask {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.linkInView button{
+  background-color: steelblue;
+  color: #fff;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+.linkInView :hover{
+  background-color: white;
+  color: steelblue;
+}
+
+.linkInView {
+  height: 30%;
+  width: 20%;
+  text-decoration: none;
+  color: black;
+}
+
+#isLimit {
+  color: red;
+}

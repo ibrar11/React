@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.App {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.Header {
+  font-size: 1.8rem;
+  margin: 2% 0;
+}
+
+.infoButton {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailsModal {
+  height: 400px;
+}
+
+.roadWorksModal {
+  height: 600px;
+}
+
+.field1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.field1 label{
+  display: flex;
+}
+
+#staric{
+  color: red;
+}
+
+#commentField {
+  width: 50%;
+}
+
+.field2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 27px;
+}
+
+.colorField {
+  width: 330px;
+}
+
+#submitButton {
+  margin-top: 10px;
+  margin-left: 30%;
+}
